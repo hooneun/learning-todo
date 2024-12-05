@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { Title } from "../Title";
-import { ToDoList } from "../ToDoList";
+import {Title} from "../Title";
+import {ToDoList} from "../ToDoList";
 
 const Container = styled.div`
   display: flex;
@@ -12,16 +12,16 @@ const Container = styled.div`
   border-radius: 8px;
 `;
 
-interface Props {
-  readonly toDoList: ReadonlyArray<string>;
-  readonly onDelete?: (todo: string) => void;
-}
+// interface Props {
+//   readonly toDoList: ReadonlyArray<string>;
+//   readonly onDelete?: (todo: string) => void;
+// }
 
-export const DataView = ({ toDoList, onDelete }: Props) => {
+export const DataView = () => {
   return (
     <Container>
       <Title label="할일목록" />
-      <ToDoList toDoList={toDoList} onDelete={onDelete} />
+      <ToDoList />
     </Container>
   );
 };
